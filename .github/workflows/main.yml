@@ -1,0 +1,26 @@
+name: Build and Deploy
+on: [push] 
+permissions:
+  contents: write
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Build
+      run: |
+        npm install
+        npm run-script build
+      env:
+        REACT_APP_WEATHER_API: ${{ secrets.REACT_APP_WEATHER_API }}
+
+    - name: Deploy
+      uses: rafaelnepomuceno00/weather-app@releases/v3
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: build
