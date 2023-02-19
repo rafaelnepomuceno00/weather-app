@@ -19,7 +19,7 @@ jobs:
         REACT_APP_WEATHER_API: ${{ secrets.REACT_APP_WEATHER_API }}
 
     - name: Deploy
-      uses: rafaelnepomuceno00/weather-app@releases/v3
+      uses: rafaelnepomuceno00/weather-app
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
