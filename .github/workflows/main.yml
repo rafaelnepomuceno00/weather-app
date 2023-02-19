@@ -9,7 +9,7 @@ jobs:
     steps:
     
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: rafaelnepomuceno00/weather-app@main
 
     - name: Build
       run: |
