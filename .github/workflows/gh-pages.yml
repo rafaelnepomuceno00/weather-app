@@ -25,6 +25,8 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+          env:
+           REACT_APP_WEATHER_APP: ${{ secrets.REACT_APP_WEATHER_APP}}
       - run: |
           sed -i '5i\  "homepage": "/pages-demo-react",' ./package.json
       - run: npm ci

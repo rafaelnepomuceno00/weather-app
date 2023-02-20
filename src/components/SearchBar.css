@@ -1,4 +1,4 @@
-.searchBox{
+.searchBox {
   display: flex;
   align-items: center;
   background-color: aliceblue;
@@ -6,17 +6,46 @@
   padding: 10px;
   justify-content: space-around;
 }
-input{
+input {
   border: none;
-  font-size: 30px;
+  font-size: 25px;
   width: 200px;
   background-color: aliceblue;
 }
 
-.SearchIcons{
+.SearchIcon {
   margin: 5px;
   color: gray;
 }
-.SearchIcons:hover{
-cursor: pointer;
+
+.LocationIcon {
+  margin: 5px;
+  color: gray;
+}
+
+.SearchIcon:hover {
+  cursor: pointer;
+}
+.NotFound {
+  background-color: aliceblue;
+  color: cadetblue;
+  border-radius: 5px;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.ContainerResult {
+  background-color: aliceblue;
+  color: rgb(13, 69, 71);
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.Temperature {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 700;
 }
